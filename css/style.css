@@ -52,12 +52,6 @@ a:hover {
   color: #b59f5b;
 }
 
-@media (min-width: 641px) and (max-width: 1200px) {
-.wrapper {
-  width: 50%;
-}
-}
-
 
 .wrapper {
   display: flex;
@@ -97,7 +91,6 @@ a:hover {
     opacity: 0.6;
   }
 
-
 .header-container {
   display: flex;
   position: relative;
@@ -106,6 +99,8 @@ a:hover {
   margin-right: auto;
   justify-content: space-between;
 }
+
+
 
 .logo {
   display: flex;
@@ -117,6 +112,8 @@ a:hover {
 
 nav.links-style {
   display: flex;
+  /* flex-direction: row-reverse;*/
+  align-items: center;
 }
 
 .menu-list {
@@ -126,6 +123,14 @@ nav.links-style {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+.menu-button-label {
+  display: none;
+}
+
+.menu-button {
+  display: none;
 }
 
 .menu-list-item {
@@ -382,8 +387,9 @@ nav.links-style {
 
 .header-aside::after {
   position: relative;
-  right: 62%;
-  left: 38%;
+margin-left: auto;
+margin-right: auto;
+  top: 10%;
   content: "";
   border: 0px solid #e1d9bd;
   height: 3px;
@@ -406,7 +412,7 @@ nav.links-style {
 .aside-text-box {
   box-sizing: border-box;
   padding: 0px;
-  width: 200px;
+  width: calc(100% - 70px);
   padding-left: 20px;
   line-height: 1;
 }
@@ -614,8 +620,6 @@ nav.links-style {
 .products-article:nth-child(even) {
   margin-left: 55px;
   margin-right: 55px;
-
-
 }
 
 .products-text-block {
@@ -652,7 +656,6 @@ nav.links-style {
   margin-top: 22px;
   justify-content: space-between;
   margin-bottom: 22px;
-
 }
 
 .price {
@@ -791,4 +794,175 @@ nav.links-style {
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .wrapper {
+    width: auto;
+  }
+  .header-container {
+    width: auto;
+    justify-content: space-between;
+    margin: 0 5%;
+    align-items: baseline;
+  }
+
+.menu-button::before, .menu-button::after {
+    content: "";
+    width: 100%;
+    height: 20%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+}
+
+.menu-button::before {
+    top: 0;
+}
+
+.menu-button::after {
+    bottom: 0;
+  }
+
+.menu-button {
+    display: flex;
+    width: 1.4em;
+    height: 1em;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    font-size: 25px;
+    position: relative;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.menu-button-label {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    margin-top: -0.1em;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .intro-title {
+    width: auto;
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+.header {
+  background-image: url(../images/banner-bg-tablet.jpg);
+  background-size: cover;
+  width: auto;
+}
+
+.trends-header {
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.trends-article-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trends-article {
+  width: 49%;
+  flex: 0 0 auto;
+}
+
+.trends-article:nth-child(2n) {
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+.trends-article:nth-child(2n+1) {
+  margin-top: 3px;
+  margin-right: 3px;
+  margin-left: 0;
+}
+
+ul.main-block-header-tags {
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.trends-article-title a{
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.main-page {
+  margin-left: 30px;
+  padding-right: 30px;
+  padding-left: 0px;
+  width: calc(62% - 60px);
+}
+.main-block-header-title {
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.new-article-block {
+  flex-direction: column;
+}
+
+.main-blocks-info {
+  margin-top: 15px;
+}
+.main-blocks-picture {
+  margin-right: 0;
+}
+
+.aside-bar {
+  width: 38%;
+  padding-right: 0;
+  margin-right: 30px;
+}
+
+::-webkit-input-placeholder {
+  font-size: 13px;
+  line-height: 40px;
+}
+::-moz-placeholder {
+  font-size: 13px;
+  line-height: 40px;
+}
+:-moz-placeholder {
+  font-size: 13px;
+  line-height: 40px;
+}
+
+.subs-button {
+  font-size: 14px;
+  line-height: 29.15px;
+}
+
+.products-article-wrapper {
+  flex-wrap: wrap;
+}
+
+.products-article {
+  flex: 0 1 auto;
+  width: 48%;
+}
+
+.products-article:nth-child(even) {
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+.products-header {
+  font-size: 18px;
+  line-height: 29px;
 }
