@@ -610,7 +610,6 @@ margin-right: auto;
   flex: 1;
   flex-direction: column;
   position: relative;
-  /* width: 348px; */
   margin-top: 28px;
   padding-left: 20px;
   padding-right: 20px;
@@ -948,13 +947,24 @@ ul.main-block-header-tags {
   line-height: 29.15px;
 }
 
+.products-wrapper {
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 100%;
+}
+
 .products-article-wrapper {
   flex-wrap: wrap;
 }
 
 .products-article {
   flex: 0 1 auto;
-  width: 48%;
+  width: calc(48% - 30px);
+}
+
+.products-article:nth-child(odd) {
+  margin-left: 0;
+  margin-right: 30px;
 }
 
 .products-article:nth-child(even) {
@@ -965,4 +975,11 @@ ul.main-block-header-tags {
 .products-header {
   font-size: 18px;
   line-height: 29px;
+}
+
+.social-link-block {
+  margin-left: 30px;
+  margin-right: 30px;
+  width: auto;
+}
 }
