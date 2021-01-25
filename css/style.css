@@ -15,7 +15,7 @@
 }
 
 .popup-wrapper {
-  /* display: none; */
+  display: none;
   width: 100%;
   display: flex;
   position: relative;
